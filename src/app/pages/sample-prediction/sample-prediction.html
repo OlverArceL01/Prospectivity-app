@@ -1,0 +1,1245 @@
+<div class="flex justify-center px-4 py-4">
+  <form
+
+    class="fieldset bg-black border-base-300 rounded-box w-full max-w-4xl border p-6"
+    [formRoot]="measurementForm"
+  >
+    <legend class="fieldset-legend text-lg">
+      Geochemical measurement
+    </legend>
+
+    <p class="text-sm opacity-70 mb-4">
+      Enter the geochemical values of a measurement to estimate its prospectivity.
+    </p>
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">CTOTAL___</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.CTOTAL___"/>
+    </div>
+    @if (
+      measurementForm.CTOTAL___().invalid()
+    ) {
+      @for (error of measurementForm.CTOTAL___().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">STOTAL__</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.STOTAL__"/>
+    </div>
+    @if (
+      measurementForm.STOTAL__().invalid()
+    ) {
+      @for (error of measurementForm.STOTAL__().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">SiO2</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+
+      <input class="input input-sm" [formField]="measurementForm.SiO2"/>      
+    </div>
+    @if (
+      measurementForm.SiO2().invalid()
+    ) {
+      @for (error of measurementForm.SiO2().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Al2O3</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Al2O3"/>      
+    </div>
+    @if (
+      measurementForm.Al2O3().invalid()
+    ) {
+      @for (error of measurementForm.Al2O3().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Fe2O3</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Fe2O3"/>
+    </div>
+    @if (
+      measurementForm.Fe2O3().invalid()
+    ) {
+      @for (error of measurementForm.Fe2O3().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">MgO</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.MgO"/>
+    </div>
+    @if (
+      measurementForm.MgO().invalid()
+    ) {
+      @for (error of measurementForm.MgO().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">CaO</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+
+      <input class="input input-sm" [formField]="measurementForm.CaO"/>
+    </div>
+    @if (
+      measurementForm.CaO().invalid()
+    ) {
+      @for (error of measurementForm.CaO().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Na2O</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Na2O"/>
+    </div>
+    @if (
+      measurementForm.Na2O().invalid()
+    ) {
+      @for (error of measurementForm.Na2O().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">K2O</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.K2O"/>
+    </div>
+    @if (
+      measurementForm.K2O().invalid()
+    ) {
+      @for (error of measurementForm.K2O().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">TiO2</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.TiO2"/>
+    </div>
+    @if (
+      measurementForm.TiO2().invalid()
+    ) {
+      @for (error of measurementForm.TiO2().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">P2O5</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.P2O5"/>
+    </div>
+    @if (
+      measurementForm.P2O5().invalid()
+    ) {
+      @for (error of measurementForm.P2O5().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">MnO</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.MnO"/>
+    </div>
+    @if (
+      measurementForm.MnO().invalid()
+    ) {
+      @for (error of measurementForm.MnO().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Cr2O3</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;0.002"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Cr2O3"/>
+    </div>
+    @if (
+      measurementForm.Cr2O3().invalid()
+    ) {
+      @for (error of measurementForm.Cr2O3().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">LOI</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+        <input class="input input-sm" [formField]="measurementForm.LOI"/>
+    </div>
+    @if (
+      measurementForm.LOI().invalid()
+    ) {
+      @for (error of measurementForm.LOI().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Suma</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Suma"/>
+    </div>
+    @if (
+      measurementForm.Suma().invalid()
+    ) {
+      @for (error of measurementForm.Suma().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Sc</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Sc"/>
+    </div>
+    @if (
+      measurementForm.Sc().invalid()
+    ) {
+      @for (error of measurementForm.Sc().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Ba</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Ba"/>
+    </div>
+    @if (
+      measurementForm.Ba().invalid()
+    ) {
+      @for (error of measurementForm.Ba().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Be</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;1.0"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Be"/>
+    </div>
+    @if (
+      measurementForm.Be().invalid()
+    ) {
+      @for (error of measurementForm.Be().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Co</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Co"/>
+    </div>
+    @if (
+      measurementForm.Co().invalid()
+    ) {
+      @for (error of measurementForm.Co().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Cs</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Cs"/>
+    </div>
+    @if (
+      measurementForm.Cs().invalid()
+    ) {
+      @for (error of measurementForm.Cs().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Ga</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Ga"/>
+    </div>
+    @if (
+      measurementForm.Ga().invalid()
+    ) {
+      @for (error of measurementForm.Ga().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Hf</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Hf"/>
+    </div>
+    @if (
+      measurementForm.Hf().invalid()
+    ) {
+      @for (error of measurementForm.Hf().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Nb</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Nb"/>
+    </div>
+    @if (
+      measurementForm.Nb().invalid()
+    ) {
+      @for (error of measurementForm.Nb().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Rb</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Rb"/>
+    </div>
+    @if (
+      measurementForm.Rb().invalid()
+    ) {
+      @for (error of measurementForm.Rb().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Sn</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;1.0"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Sn"/>
+    </div>
+    @if (
+      measurementForm.Sn().invalid()
+    ) {
+      @for (error of measurementForm.Sn().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Sr</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Sr"/>
+    </div>
+    @if (
+      measurementForm.Sr().invalid()
+    ) {
+      @for (error of measurementForm.Sr().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Ta</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Ta"/>
+    </div>
+    @if (
+      measurementForm.Ta().invalid()
+    ) {
+      @for (error of measurementForm.Ta().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Th</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Th"/>
+    </div>
+    @if (
+      measurementForm.Th().invalid()
+    ) {
+      @for (error of measurementForm.Th().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">U</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.U"/>
+    </div>
+    @if (
+      measurementForm.U().invalid()
+    ) {
+      @for (error of measurementForm.U().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">V</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.V"/>
+    </div>
+    @if (
+      measurementForm.V().invalid()
+    ) {
+      @for (error of measurementForm.V().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">W</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.W"/>
+    </div>
+    @if (
+      measurementForm.W().invalid()
+    ) {
+      @for (error of measurementForm.W().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Zr</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Zr"/>
+    </div>
+    @if (
+      measurementForm.Zr().invalid()
+    ) {
+      @for (error of measurementForm.Zr().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Y</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Y"/>
+    </div>
+    @if (
+      measurementForm.Y().invalid()
+    ) {
+      @for (error of measurementForm.Y().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">La</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.La"/>
+    </div>
+    @if (
+      measurementForm.La().invalid()
+    ) {
+      @for (error of measurementForm.La().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Ce</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Ce"/>
+    </div>
+    @if (
+      measurementForm.Ce().invalid()
+    ) {
+      @for (error of measurementForm.Ce().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Pr</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+    <input class="input input-sm" [formField]="measurementForm.Pr"/>
+    </div>
+    @if (
+      measurementForm.Pr().invalid()
+    ) {
+      @for (error of measurementForm.Pr().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Nd</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Nd"/>
+    </div>
+    @if (
+      measurementForm.Nd().invalid()
+    ) {
+      @for (error of measurementForm.Nd().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Sm</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Sm"/>
+    </div>
+    @if (
+      measurementForm.Sm().invalid()
+    ) {
+      @for (error of measurementForm.Sm().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Eu</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Eu"/>
+    </div>
+    @if (
+      measurementForm.Eu().invalid()
+    ) {
+      @for (error of measurementForm.Eu().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Gd</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Gd"/>
+    </div>
+    @if (
+      measurementForm.Gd().invalid()
+    ) {
+      @for (error of measurementForm.Gd().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Tb</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Tb"/>
+    </div>
+    @if (
+      measurementForm.Tb().invalid()
+    ) {
+      @for (error of measurementForm.Tb().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Dy</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Dy"/>
+    </div>
+    @if (
+      measurementForm.Dy().invalid()
+    ) {
+      @for (error of measurementForm.Dy().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Ho</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Ho"/>
+    </div>
+    @if (
+      measurementForm.Ho().invalid()
+    ) {
+      @for (error of measurementForm.Ho().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Er</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Er"/>
+    </div>
+    @if (
+      measurementForm.Er().invalid()
+    ) {
+      @for (error of measurementForm.Er().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Tm</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Tm"/>
+    </div>
+    @if (
+      measurementForm.Tm().invalid()
+    ) {
+      @for (error of measurementForm.Tm().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Yb</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Yb"/>
+    </div>
+    @if (
+      measurementForm.Yb().invalid()
+    ) {
+      @for (error of measurementForm.Yb().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Lu</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm"  [formField]="measurementForm.Lu"/>
+    </div>
+    @if (
+      measurementForm.Lu().invalid()
+    ) {
+      @for (error of measurementForm.Lu().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Mo</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Mo"/>
+    </div>
+    @if (
+      measurementForm.Mo().invalid()
+    ) {
+      @for (error of measurementForm.Mo().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Cu</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Cu"/>
+    </div>
+    @if (
+      measurementForm.Cu().invalid()
+    ) {
+      @for (error of measurementForm.Cu().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Pb</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Pb"/>
+    </div>
+    @if (
+      measurementForm.Pb().invalid()
+    ) {
+      @for (error of measurementForm.Pb().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+  
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Zn</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Zn"/>
+    </div>
+    @if (
+      measurementForm.Zn().invalid()
+    ) {
+      @for (error of measurementForm.Zn().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Ni</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Ni"/>
+    </div>
+    @if (
+      measurementForm.Ni().invalid()
+    ) {
+      @for (error of measurementForm.Ni().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">As_</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value or leave blank
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.As_"/>
+    </div>
+    @if (
+      measurementForm.As_().invalid()
+    ) {
+      @for (error of measurementForm.As_().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Cd</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;0.1"
+        </p>
+      </div>
+    <input class="input input-sm" [formField]="measurementForm.Cd"/>
+    </div>
+    @if (
+      measurementForm.Cd().invalid()
+    ) {
+      @for (error of measurementForm.Cd().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Sb</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", "&lt;0.1" or "&gt;2000.0"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Sb"/>
+    </div>
+    @if (
+      measurementForm.Sb().invalid()
+    ) {
+      @for (error of measurementForm.Sb().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Bi</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;0.1"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Bi"/>
+    </div>
+    @if (
+      measurementForm.Bi().invalid()
+    ) {
+      @for (error of measurementForm.Bi().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Ag</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;0.1"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Ag"/>
+    </div>
+    @if (
+      measurementForm.Ag().invalid()
+    ) {
+      @for (error of measurementForm.Ag().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Au</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;0.5"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Au"/>
+    </div>
+    @if (
+      measurementForm.Au().invalid()
+    ) {
+      @for (error of measurementForm.Au().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Hg</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;0.01"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Hg"/>
+    </div>
+    @if (
+      measurementForm.Hg().invalid()
+    ) {
+      @for (error of measurementForm.Hg().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Tl</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;0.1"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Tl"/>
+    </div>
+    @if (
+      measurementForm.Tl().invalid()
+    ) {
+      @for (error of measurementForm.Tl().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Se</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, "IS", or "&lt;0.5"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Se"/>
+    </div>
+    @if (
+      measurementForm.Se().invalid()
+    ) {
+      @for (error of measurementForm.Se().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">Te_ppm</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, leave blank, or "&lt;0.2"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.Te_ppm"/>
+    </div>
+    @if (
+      measurementForm.Te_ppm().invalid()
+    ) {
+      @for (error of measurementForm.Te_ppm().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex justify-between w-full">
+      <div>
+        <label class="label">B_ppm</label>
+        <p class="text-xs italic text-base-content/60">
+          Numeric value, leave blank, or "&lt;3.0"
+        </p>
+      </div>
+      <input class="input input-sm" [formField]="measurementForm.B_ppm"/>
+    </div>
+    @if (
+      measurementForm.B_ppm().invalid()
+    ) {
+      @for (error of measurementForm.B_ppm().errors(); track error) {
+        <p class="text-sm text-error mt-1">
+          {{ error.message }}
+        </p>
+      }
+    }
+    <div class="flex items-center gap-2">
+      <input
+        type="checkbox"
+        class="checkbox checkbox-sm"
+        [formField]="measurementForm.geochemistry_published"
+      />
+      <label class="label">Published geochemistry</label>
+    </div>
+    
+    <button 
+    type="submit" 
+    class="btn btn-primary my-5 disabled:bg-gray-500 disabled:text-gray-700"
+    [disabled]="measurementForm().invalid()"
+
+    >
+      Predict prospectivity
+    </button>
+    <div class="card bg-base-200 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-base">Results:</h2>
+          @if (currentPrediction().data; as prediction) {
+
+          <div class="grid grid-cols-2 gap-4 mt-2">
+            <div>
+              <p class="text-xs uppercase tracking-wide text-base-content/60">
+                Probability
+              </p>
+              <p class="text-2xl font-semibold">
+                {{ prediction.probability * 100 | number:'1.2-2' }}%
+              </p>
+            </div>
+            <div
+              class="badge badge-lg mt-1"
+              [class.badge-success]="prediction.prediction"
+              [class.badge-error]="!prediction.prediction"
+            >
+              {{ prediction.prediction ? 'High Prospectivity Signal' : 'Low Prospectivity Signal' }}
+            </div>
+          </div>
+          }
+          @if (currentPrediction().state === 'loading') {
+            <div class="flex items-center justify-center py-8">
+              <span class="loading loading-spinner loading-lg"></span>
+            </div>
+          }
+        </div>
+    </div>
+  </form>
+</div>
