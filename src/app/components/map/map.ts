@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, inject, input, ViewChild } from '@angular/core';
 import { ProspectivityMapData } from '../../interfaces/prospectivity-map-data-response';
 import { environment } from '../../../environments/environment';
+
 import * as mapboxgl from 'mapbox-gl/esm';
 
 import { Prospectivity } from '../../services/prospectivity';
