@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
+
 import { MainLayout } from './layout/main-layout/main-layout';
-import { ProspectivityMap } from './pages/prospectivity-map/prospectivity-map';
-import { SamplePrediction } from './pages/sample-prediction/sample-prediction';
 
 export const routes: Routes = [
   {
@@ -10,11 +9,15 @@ export const routes: Routes = [
     children: [
       {
         path: 'map',
-        component: ProspectivityMap
+        loadComponent: () =>
+          import('./pages/prospectivity-map/prospectivity-map')
+            .then(m => m.ProspectivityMap)
       },
       {
         path: 'prediction',
-        component: SamplePrediction
+        loadComponent: () =>
+          import('./pages/sample-prediction/sample-prediction')
+            .then(m => m.SamplePrediction)
       },
       {
         path: '',
