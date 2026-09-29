@@ -18,7 +18,7 @@
     "@angular/platform-browser": "^22.2.0",
     "@angular/router": "^22.2.0",
     "daisyui": "^5.7.46",
-    "mapbox-gl": "^3.31.0",
+    "mapbox-gl": "^3.30.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

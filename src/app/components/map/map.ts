@@ -1,9 +1,8 @@
 import { AfterViewInit, Component, ElementRef, inject, input, ViewChild } from '@angular/core';
 import { ProspectivityMapData } from '../../interfaces/prospectivity-map-data-response';
 import { environment } from '../../../environments/environment';
-import mapboxgl, {
-  MapMouseEvent,
-} from 'mapbox-gl';
+import * as mapboxgl from 'mapbox-gl/esm';
+
 import { Prospectivity } from '../../services/prospectivity';
 import { MeasurementData } from '../../interfaces/measurement-data-response';
 
@@ -21,9 +20,8 @@ export class Map implements AfterViewInit{
   mapElement!: ElementRef;
 
 ngAfterViewInit(): void {
-  mapboxgl.accessToken = environment.mapboxApiKey;
-
   const map = new mapboxgl.Map({
+    accessToken: environment.mapboxApiKey,
     container: this.mapElement.nativeElement,
     style: 'mapbox://styles/mapbox/satellite-streets-v12',
     center: [-70.65, -25.45],
@@ -62,7 +60,7 @@ ngAfterViewInit(): void {
 map.on(
   'click',
   'prospectivity-points',
-  (e: MapMouseEvent) => {
+  (e: mapboxgl.MapMouseEvent) => {
 
     const feature = e.features?.[0];
 
