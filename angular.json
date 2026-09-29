@@ -23,11 +23,6 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "node_modules/mapbox-gl/dist/esm",
-                "output": "assets/mapbox"
               }
             ],
             "styles": [
