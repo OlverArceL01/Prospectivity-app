@@ -23,6 +23,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "worker.js",
+                "input": "node_modules/mapbox-gl/dist/esm",
+                "output": "assets"
               }
             ],
             "styles": [

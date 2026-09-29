@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/worker.js",
+      "destination": "/assets/worker.js"
+    }
+  ]
+}
