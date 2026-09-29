@@ -25,9 +25,9 @@
                 "input": "public"
               },
               {
-                "glob": "worker.js",
+                "glob": "**/*",
                 "input": "node_modules/mapbox-gl/dist/esm",
-                "output": "assets"
+                "output": "assets/mapbox"
               }
             ],
             "styles": [
