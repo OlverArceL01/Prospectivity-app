@@ -2,10 +2,12 @@ import { AfterViewInit, Component, ElementRef, inject, input, ViewChild } from '
 import { ProspectivityMapData } from '../../interfaces/prospectivity-map-data-response';
 import { environment } from '../../../environments/environment';
 
-import * as mapboxgl from 'mapbox-gl/esm';
+import mapboxgl from 'mapbox-gl';
 
 import { Prospectivity } from '../../services/prospectivity';
 import { MeasurementData } from '../../interfaces/measurement-data-response';
+
+
 
 @Component({
   imports: [],
@@ -33,7 +35,7 @@ export class Map implements AfterViewInit{
     map.on('load', () => {
       map.addSource('prospectivity', {
         type: 'geojson',
-        data: this.data()
+        data: this.data() as GeoJSON.GeoJSON
       });
 
       map.addLayer({
