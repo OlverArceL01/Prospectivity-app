@@ -36,6 +36,6 @@ export class Prospectivity {
 
     predictSampleProspectivity(payload: MeasurementPayload): Observable<PredictionResponse>{
         return this.http
-        .post<PredictionResponse>(`${environment.apiUrl}/predict-sample-prospectivity/`, payload);
+        .post<PredictionResponse>(`${environment.apiUrl}/predict-sample-prospectivity`, payload);
     }
 }
