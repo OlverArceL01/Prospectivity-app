@@ -1,59 +1,54 @@
-# ProspectivityApp
+# Mining Prospectivity Chile Web App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+## File System
+The current repository keeps the following structure.
 
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
+```
+prospectivity-app/
+├── scripts/
+│   └── generate-environment.js # Generate environment variables
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── map/ # Visualize the prospectivity map
+|   |   |   └── navbar/ # Navigation bar
+│   │   ├── interfaces/
+│   │   ├── pages/
+│   │   |   ├── prospectivity-map/ # Prospectivity map page
+│   │   |   └── sample-prediction/ # Page to predict prospectivity from a measurement
+│   │   ├── services/
+│   │   |   └── prospectivity.ts # Prospectivity service to connect to the API
+│   │   ├── validators/ # Validate the prospectivity prediction form
+│   │   └── app.routes.ts # Application routes
+│   └── environment/ # Mapbox API key and API URL
+├── .env.example # Example environment variables for the API key and API URL
+├── Dockerfile # Docker configuration for deployment
+├── nginx.conf # Redirect requests to index.html for for Angular routing
+└── package.json
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Installation
 
-## Code scaffolding
+Use `npm install` to install all necesssary packages. Then you can run the application using `ng serve` or build it using `npm run build`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+This project uses Node.js `22.23.2` and Angular `22.2.0`.
 
-```bash
-ng generate component component-name
+For development purposes, execute `ng generate environments` and update `environment.ts`, `environment.development.ts` with the following:
+
+```javascript
+export const environment = {
+    mapboxApiKey: 'your mapbox api key',
+    apiUrl: 'https://api.prospectivity.olver.site'
+  };
+
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+For deployment, refer to `.env.example` to create your own `.env` file and add your Mapbox API key and API URL. Then, execute `npm run build`. This will generate `environment.ts` with the required environment variables.
 
-```bash
-ng generate --help
-```
+## Links
 
-## Building
+You can also use the API directly or view its documentation.
 
-To build the project run:
+API Docs: https://api.prospectivity.olver.site/docs
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+You can also view the Machine Learning repository on GitHub: https://github.com/OlverArceL01/Prospectivity-ml

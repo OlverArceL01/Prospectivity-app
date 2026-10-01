@@ -1,11 +1,14 @@
 import { Component, inject, signal } from '@angular/core';
 import { exampleMeasurementFormData, MeasurementFormData } from '../../interfaces/measurement-form-data';
 import { form, FormField, FormRoot, validate } from '@angular/forms/signals';
-import { validateNumericValue, validateNumericValueInsufficientSampleLessThan, validateNumericValueInsufficientSampleLessThanGreaterThan, validateNumericValueIsNaLessThan } from '../../validators/validate-numeric-value';
+import { validateNumericValue } from '../../validators/validate-numeric-value';
 import { MeasurementPayload } from '../../interfaces/measurement-payload';
 import { Prospectivity } from '../../services/prospectivity';
 import { PredictionResponse } from '../../interfaces/prediction-response';
 import { DecimalPipe } from '@angular/common';
+import { validateNumericValueInsufficientSampleLessThan } from '../../validators/validate-numeric-value-insufficient-sample-less-than';
+import { validateNumericValueInsufficientSampleLessThanGreaterThan } from '../../validators/validate-numeric-value-insufficient-sample-less-than-greater-than';
+import { validateNumericValueIsNaLessThan } from '../../validators/validate-numeric-value-isna-less-than';
 
 interface PredictionState{
   state: 'idle' | 'loading' | 'success';

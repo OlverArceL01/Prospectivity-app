@@ -1,7 +1,7 @@
-<div class="flex justify-center px-4 py-4">
+<div class="flex justify-center bg-cyan-800 px-4 py-4">
   <form
 
-    class="fieldset bg-black border-base-300 rounded-box w-full max-w-4xl border p-6"
+    class="fieldset bg-black border-2 rounded-box w-full max-w-4xl p-6"
     [formRoot]="measurementForm"
   >
     <legend class="fieldset-legend text-lg">
@@ -1205,7 +1205,7 @@
     
     <button 
     type="submit" 
-    class="btn btn-primary my-5 disabled:bg-gray-500 disabled:text-gray-700"
+    class="btn bg-orange-600 my-5 disabled:bg-gray-500 disabled:text-gray-700"
     [disabled]="measurementForm().invalid()"
 
     >
@@ -1213,10 +1213,12 @@
     </button>
     <div class="card bg-base-200 shadow-sm">
       <div class="card-body">
-        <h2 class="card-title text-base">Results:</h2>
+          <h2 class="card-title text-lg font-semibold">
+            Prediction Results
+          </h2>
           @if (currentPrediction().data; as prediction) {
 
-          <div class="grid grid-cols-2 gap-4 mt-2">
+          <div class="flex justify-between mt-2">
             <div>
               <p class="text-xs uppercase tracking-wide text-base-content/60">
                 Probability

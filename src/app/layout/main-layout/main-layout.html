@@ -1,7 +1,13 @@
-<div class="flex h-dvh flex-col">
+<div class="grid min-h-dvh grid-rows-[auto_1fr_auto]">
   <app-navbar />
 
-  <div class="min-h-0 flex-1">
+  <main>
     <router-outlet />
-  </div>
+  </main>
+
+  <footer class="bg-cyan-500 p-2 text-center text-sm text-black">
+    Data provided by
+    <span class="font-medium">SERNAGEOMIN</span>
+    (Servicio Nacional de Geología y Minería)
+  </footer>
 </div>
